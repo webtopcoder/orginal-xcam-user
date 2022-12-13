@@ -1,0 +1,32 @@
+.private-streaming-container {
+  position: relative;
+  margin: 5px 0;
+  min-height: 520px;
+
+  #private-publisher {
+    right: 10px;
+    top: 25px;
+    height: 145px;
+    width: 145px;
+    position: absolute;
+    z-index: 2;
+    object-fit: cover;
+
+    @media screen and (max-width: @mobile-small-query) {
+      right: 5px;
+      top: 5px;
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  #private-subscriber {
+    width: 100% !important;
+    height: 480px;
+    object-fit: cover;
+
+    @media screen and (max-width: @mobile-small-query) {
+      height: 320px;
+    }
+  }
+}

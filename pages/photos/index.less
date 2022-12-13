@@ -1,0 +1,14 @@
+@import '../../style/default.less';
+
+.photo-carousel-content {
+  padding-right: @content-padding;
+  padding-left: @content-padding;
+
+  @media (max-width: @mobile-query) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.carousel .slide img {
+  max-height: 500px;
+}

@@ -1,0 +1,138 @@
+@import '../../../style/default.less';
+
+.product-form {
+  padding: 16px 24px !important;
+
+  @media (max-width: 567px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .edit-icon {
+    position: absolute;
+    font-size: 16px;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 8px;
+    background: @white-color;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  label {
+    font-weight: bold !important;
+  }
+}
+
+.product-card {
+  width: 100%;
+  border-radius: @border-radius-image;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16),
+    0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    transform: scale(1.03);
+  }
+  .product-thumb {
+    position: relative;
+    width: 100%;
+    padding-top: calc(100% - 50px);
+    .value {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .type-digital {
+      position: absolute;
+      top: 40px;
+      left: 10px;
+      padding: 3px 10px;
+      background: #f06;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-left-radius: @border-radius-image;
+      border-top-right-radius: @border-radius-image;
+    }
+
+    .product-stats {
+      width: 100%;
+      color: #fff;
+      background-color: rgba(1, 1, 1, 0.1);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .product-name {
+    width: 100%;
+    color: @regular-text;
+    background-color: @white-color;
+    border-bottom-left-radius: @border-radius-image;
+    border-bottom-right-radius: @border-radius-image;
+    padding: 10px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .btn-purchase {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    background-color: #ffffff42;
+    color: @white-color;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    min-width: 30px;
+
+    .text-buy {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .text-buy {
+        display: block;
+      }
+    }
+  }
+
+  .stock {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    background-color: #ffffff42;
+    color: @white-color;
+    align-items: center;
+    font-weight: bold;
+    min-width: 30px;
+  }
+}

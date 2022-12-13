@@ -1,0 +1,39 @@
+.message-list {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 0px;
+  &.custom {
+    height: 50vh;
+  }
+}
+.message-list-container {
+  padding: 10px;
+  overflow-y: scroll;
+  // height: calc(100% - 55px);
+  height: 90%;
+}
+.sub-text {
+  color: #ff0064;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: rgba(1,1,1,.5);
+}
+
+@media all and (max-width: 768px) {
+  .sub-text {
+    font-size: 14px;
+  }
+}
+.start-conversation {
+  text-align: center;
+  margin-top:30%;
+  font-size: large;
+}

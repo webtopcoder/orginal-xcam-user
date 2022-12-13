@@ -1,0 +1,39 @@
+.stream-header {
+  margin-bottom: 10px;
+
+  .left-content {
+    display: flex;
+    align-items: center;
+
+    .stream-title {
+      margin-left: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ff0066;
+      display: flex;
+      flex-direction: column;
+      text-transform: capitalize;
+    }
+
+    .stream-avatar {
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.button-block {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  .ant-btn {
+    height: 35px;
+    margin: 5px;
+  }
+  @media (max-width: 567px) {
+    justify-content: flex-start;
+    margin-top: 10px;
+    width: 100%;
+  }
+}

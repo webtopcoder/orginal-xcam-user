@@ -1,0 +1,36 @@
+{
+  "./dev/noop": [
+    {
+      "id": "./node_modules/next/dist/client/dev/noop.js",
+      "file": "static/chunks/1.js"
+    }
+  ],
+  "antd/lib/menu": [
+    {
+      "id": "./node_modules/@ant-design/icons-svg/lib/asn/EllipsisOutlined.js",
+      "file": "static/chunks/0.js"
+    },
+    {
+      "id": "./node_modules/@ant-design/icons/EllipsisOutlined.js",
+      "file": "static/chunks/0.js"
+    },
+    {
+      "id": "./node_modules/@ant-design/icons/lib/icons/EllipsisOutlined.js",
+      "file": "static/chunks/0.js"
+    },
+    {
+      "id": "./node_modules/antd/lib/menu/SubMenu.js",
+      "file": "static/chunks/0.js"
+    },
+    {
+      "id": "./node_modules/antd/lib/menu/index.js",
+      "file": "static/chunks/0.js"
+    }
+  ],
+  "react-number-format": [
+    {
+      "id": "./node_modules/react-number-format/dist/react-number-format.es.js",
+      "file": "static/chunks/2.js"
+    }
+  ]
+}

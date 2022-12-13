@@ -1,0 +1,188 @@
+@import '../../../style/vars';
+
+.performer-grid {
+  background: transparent !important;
+  width: 100%;
+  .icon {
+    color: @primary-color;
+  }
+  .ant-card-head {
+    padding: 0 10px !important;
+    border: none;
+  }
+  .performer-box {
+    width: calc(100% / 6);
+    padding: 10px;
+
+    .tags {
+      color: @light-text;
+    }
+
+    .about-me {
+      color: @regular-text;
+      font-weight: bold;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .performer-avatar {
+      position: relative;
+      display: block;
+      border-radius: 25px;
+      height: 200px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      .p-status {
+        background: @danger-color;
+        position: absolute;
+        padding: 2px 5px;
+        top: 5px;
+        left: 5px;
+        border-radius: 5px;
+        display: inline-block;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 600;
+        &.online {
+          background: @success-color;
+        }
+        &.streaming {
+          background: @success-color;
+        }
+      }
+      .p-gradient {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        background: -webkit-linear-gradient(
+          top,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(128, 128, 128, 0.3) 80%,
+          rgba(128, 128, 128, 0.3) 81%,
+          rgba(128, 128, 128, 0.5) 100%
+        );
+        background: -moz-linear-gradient(
+          top,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(128, 128, 128, 0.3) 80%,
+          rgba(128, 128, 128, 0.3) 81%,
+          rgba(128, 128, 128, 0.5) 100%
+        );
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(128, 128, 128, 0.3) 80%,
+          rgba(128, 128, 128, 0.3) 81%,
+          rgba(128, 128, 128, 0.5) 100%
+        );
+      }
+      .performer-title {
+        color: @white-color;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        font-size: 12px;
+        width: 69%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .performer-view {
+        color: @white-color;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-transform: capitalize;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        font-size: 12px;
+        width: 29%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    @media (max-width: 1200px) {
+      width: calc(100% / 4);
+    }
+    @media (max-width: 567px) {
+      width: calc(100% / 2);
+    }
+  }
+}
+
+.profile-card {
+  background-color: rgba(245, 0, 98, 0.1);
+  padding: 20px;
+  font-family: Roboto;
+  height: 100%;
+
+  .avatar {
+    margin-bottom: 20px;
+    img {
+      border-radius: 20px;
+      // width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+  }
+  .profile {
+    span {
+      color: #8c8c8c;
+    }
+    .lable {
+      font-weight: bold;
+      color: #000000;
+    }
+  }
+
+  .tags {
+    font-weight: bold;
+    color: @primary-color;
+  }
+
+  p {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+}
+
+.performerEditForm {
+  @media (max-width: 567px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .edit-icon {
+    position: absolute;
+    font-size: 16px;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 8px;
+    background: white;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  label {
+    font-weight: bold !important;
+  }
+}

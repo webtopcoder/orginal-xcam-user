@@ -1,0 +1,161 @@
+@import '../../../style/default.less';
+
+.video-grid {
+  background: transparent !important;
+  padding: 16px 0;
+  .video-box {
+    width: calc(100% / 4);
+    box-shadow: none;
+    position: relative;
+    padding: 15px;
+    .video-info {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+    }
+
+    .video-thumbnail {
+      position: relative;
+      img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
+
+    .play-icon {
+      position: absolute;
+      color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+    }
+
+    @media (max-width: 990px) {
+      width: calc(100% / 3);
+    }
+
+    @media (max-width: 567px) {
+      width: calc(100% / 2);
+      .video-thumbnail {
+        img {
+          height: 155px;
+        }
+      }
+    }
+  }
+}
+
+.video-form {
+  padding: 16px 24px !important;
+  @media (max-width: 567px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .edit-icon {
+    position: absolute;
+    font-size: 16px;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 8px;
+    background: white;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  label {
+    font-weight: bold !important;
+  }
+}
+
+.video-single-card {
+  border-radius: 10px;
+  background: transparent !important;
+  box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16),
+    0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+  .ant-card-body {
+    padding: 0;
+  }
+  .video-single-card-thumb {
+    position: relative;
+    width: 100%;
+    padding-top: calc(100% - 50px);
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+    .value {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .download-icon {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+  .info {
+    padding: 10px 0 10px 10px;
+    font-weight: bold;
+    color: @regular-text;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.purchased-video-card {
+  margin-bottom: 20px;
+  .purchased-video-card-thumb {
+    padding: 20px;
+    background-color: rgba(255, 0, 102, 0.1);
+    border-radius: 10px;
+    position: relative;
+    img {
+      width: 100%;
+      height: 150px;
+      border-radius: @border-radius-image;
+    }
+    span {
+      font-size: 30px;
+      color: #ffffff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 99;
+    }
+  }
+  .purchased-video-card-name {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: @font-size-base;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+.video-dimensions {
+  width: 100%;
+  min-height: 250px;
+  max-height: 320px;
+}

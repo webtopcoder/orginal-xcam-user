@@ -1,0 +1,70 @@
+.conversation-list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+
+  .conversation-info {
+    overflow: hidden;
+  }
+}
+
+.conversation-left-corner {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.conversation-left-corner span {
+  font-size: 10px;
+}
+
+.conversation-list-item:hover {
+  background: #ffe6eb;
+  cursor: pointer;
+}
+
+.conversation-list-item.active {
+  background: #ffe6eb;
+  pointer-events: none;
+}
+
+.conversation-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.conversation-title {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.conversation-snippet {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conversation-time {
+  font-size: 10px;
+  color: #888;
+  margin: 0;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0;
+  left: 10px;
+}

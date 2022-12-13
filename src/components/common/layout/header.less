@@ -1,0 +1,240 @@
+@import '../../../../style/vars.less';
+
+.ant-layout-header.header {
+  width: 100%;
+  padding: 0 24px;
+  box-shadow: @shadow-2;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  z-index: @headerZIndex;
+  align-items: center;
+  background-color: @white-color;
+  .left-container {
+    display: flex;
+    align-items: center;
+    .ant-menu {
+      background-color: @primary-color;
+      border: none;
+      margin-left: 30px;
+      .ant-menu-item, .ant-menu-submenu {
+        border-bottom: none;
+        color: @white-color;
+        height: 71px;
+        line-height: 71px;
+        text-align: center;
+        font-size: 14px;
+        &:hover{
+          background-color: @secondary-color;
+        }
+
+        &::selection {
+          background-color: @secondary-color;
+        }
+
+        .ant-menu-submenu-title {
+          color: @white-color;
+        }
+        a {
+          color: @white-color !important;
+          &::before {
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .right-container {
+    display: flex;
+    align-items: center;
+    .btn-login {
+      margin-left:  20px;
+      margin-right: 10px;
+      color: @primary-color;
+    }
+  }
+
+  .button {
+    cursor: pointer;
+    color: @white-color;
+    transition: @transition-ease-in;
+
+    &:hover {
+      color: @primary-color;
+      background-color: @hover-color;
+    }
+  }
+
+  .header-logo {
+    width: 150px;
+    height: 72px;
+
+    @media (max-width: @desktop-query) {
+      margin-left: 10px;
+    }
+
+    @media (max-width: @mobile-small-query) {
+      width: 100px !important;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    @media (max-width: @mobile-small-query) {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      height: 40px;
+      width: 100%;
+      background: @primary-color;
+      padding: 0 5px;
+      z-index: 1000;
+      &.hide {
+        left: -9999px;
+      }
+    }
+  }
+}
+
+.iconButton {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  cursor: pointer;
+  .background-hover();
+
+  &:hover {
+    .iconFont {
+      color: @primary-color;
+    }
+  }
+
+  & + .iconButton {
+    margin-left: 8px;
+  }
+
+  .iconFont {
+    color: #b2b0c7;
+    font-size: 24px;
+  }
+}
+
+.notification {
+  padding: 24px 0;
+  width: 320px;
+  .notificationItem {
+    transition: all 0.3s;
+    padding: 12px 24px;
+    cursor: pointer;
+    &:hover {
+      background-color: @hover-color;
+    }
+  }
+  .clearButton {
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    cursor: pointer;
+    .background-hover();
+  }
+}
+
+.notificationPopover {
+  :global {
+    .ant-popover-inner-content {
+      padding: 0;
+    }
+    .ant-popover-arrow {
+      display: none;
+    }
+    .ant-list-item-content {
+      flex: 0;
+      margin-left: 16px;
+    }
+  }
+}
+
+.search-icon {
+  display: none;
+  @media (max-width: @mobile-small-query) {
+    display: flex;
+    font-size: 20px;
+    color: @white-color;
+    width: 25px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    &.active {
+      background-color: @secondary-color;
+    }
+  }
+}
+
+.call-requests {
+  cursor: pointer;
+  color: @white-color;
+  margin: 0 15px;
+  display: flex;
+  .anticon {
+    font-size: 22px;
+  }
+  .ant-badge-count {
+    background-color: @warning-color;
+  }
+  @media (max-width: @mobile-small-query) {
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: @desktop-query) {
+  .ant-layout-header.header {
+    height: 72px;
+    width: 100%;
+    padding: 0 5px;
+    .btn-tokens {
+      font-size: 10px;
+      padding: 5px 10px;
+    }
+    .left-container {
+      .menu-left-header {
+        position: absolute;
+        background-color: #000;
+        height: 40px;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        .ant-menu {
+          width: 100%;
+          margin-left: 0;
+          background-color: #000;
+        }
+        .ant-menu-item, .ant-menu-submenu {
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+    .header-logo {
+      height: 72px;
+      width: 120px;
+      display: flex;
+    }
+  }
+}
+
+#layoutHeader {
+  background-color: @primary-color;
+}

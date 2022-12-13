@@ -1,0 +1,99 @@
+@import '../../../style/default.less';
+
+.compose {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background: #fff;
+}
+
+.compose .ant-input-textarea {
+  width: 100%;
+}
+
+.compose-input {
+  flex: 1;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  height: 30px;
+  background: none;
+  color: #333;
+  outline: thin;
+  border-color: @secondary-color !important;
+  box-shadow: 0 0 0 2px @secondary-color !important;
+  &:focus {
+    border-color: @secondary-color !important;
+    box-shadow: 0 0 0 2px @secondary-color !important;
+  }
+  &::placeholder {
+    color: @light-text;
+  }
+}
+
+.compose-input::placeholder {
+  opacity: 0.5;
+}
+
+.compose {
+  .toolbar-button {
+    color: #bbbbbf;
+    margin-left: 15px;
+  }
+  .toolbar-button:hover {
+    color: #99999c;
+  }
+}
+
+.grp-icons {
+  padding: 0 10px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grp-emotions {
+  aside.emoji-picker-react {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 50%
+  }
+  &:hover aside.emoji-picker-react {
+    display: flex;
+  }
+}
+
+.grp-file-icon {
+  background: url('/paperclip-ico.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
+  .avatar-uploader {
+    opacity: 0;
+    .ant-upload {
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border: none;
+      margin: 0;
+      img {
+        width: 20px!important;
+        height: 20px;
+        object-fit: cover;
+      }
+    }
+    .ant-upload-text {
+      display: none;
+    }
+  }
+}

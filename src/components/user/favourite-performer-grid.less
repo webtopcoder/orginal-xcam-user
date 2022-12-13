@@ -1,0 +1,140 @@
+@import '../../../style/default';
+
+.favorite-performer-grid {
+  background: transparent !important;
+  width: 100%;
+  .icon {
+    color: @primary-color;
+    position: absolute;
+    bottom: 50px;
+    cursor: 'pointer';
+    right: 25px;
+    font-size: 15px;
+  }
+  .ant-card-head {
+    padding: 0 10px !important;
+    border: none;
+  }
+  .performer-box {
+    width: calc(100% / 6 );
+    padding: 10px;
+    position: relative;
+
+    .tags {
+      color: @light-text;
+    }
+
+    .about-me {
+      color: @regular-text;
+      font-weight: bold;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .performer-avatar {
+      position: relative;
+      display: block;
+      img {
+        width: 100%;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+    }
+
+    .performer-title {
+      display: flex;
+      flex-direction: row;
+      margin-top: 3px;
+      align-items: center;
+      font-size: 16px;
+      .performer-name {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 70%;
+      }
+      .performer-flag{
+        img {
+          width: 20px;
+          height: 16px;
+          position: absolute;
+          right: 20px;
+          bottom: 15px;
+        }
+      }
+    }
+
+    @media (max-width: 1200px) {
+      width: calc(100% / 4 );
+    }
+    @media (max-width: 567px) {
+      width: calc(100% / 2 );
+    }
+  }
+}
+
+.profile-card {
+  background-color: rgba(245, 0, 98, 0.1);
+  padding: 20px;
+  font-family: Roboto;
+  height: 100%;
+
+  .avatar {
+    margin-bottom: 20px;
+    img {
+      border-radius: 20px;
+      // width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+  }
+  .profile {
+    span {
+      color: #8c8c8c;
+    }
+    .lable {
+      font-weight: bold;
+      color: #000000;
+    }
+  }
+
+  .tags {
+    font-weight: bold;
+    color: @primary-color;
+  }
+
+  p {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+}
+
+.performerEditForm {
+  @media (max-width: 567px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .edit-icon {
+    position: absolute;
+    font-size: 16px;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 8px;
+    background: white;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  label {
+    font-weight: bold !important;
+  }
+}

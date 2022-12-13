@@ -1,0 +1,71 @@
+.messenger {
+  display: flex;
+  width: 100%;
+}
+.message-stream {
+  display: flex;
+  width: 100%;
+  height: 480px;
+  position: relative;
+  margin-bottom: 5px;
+  background-color: transparent;
+
+  &.user-logged-in {
+    .message-list {
+      margin-bottom: 0px;
+    }
+    .message-list-container {
+      height: calc(100% - 50px) !important;
+    }
+  }
+}
+
+.scrollable {
+  position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sidebar {
+  background-color: #fff;
+  display: flex;
+  width: 30%;
+}
+
+.chat-content {
+  background: #fff;
+  display: flex;
+  width: 70%;
+  padding: 20px 0;
+  position: relative;
+}
+.chat-content .close-btn {
+  display: none;
+}
+
+.footer {
+  background: #fff;
+}
+
+@media all and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar.active {
+    display: none;
+  }
+  .chat-content {
+    display: none;
+  }
+  .chat-content.active {
+    display: flex;
+    width: 100%;
+  }
+  .chat-content.active .close-btn {
+    display: flex;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,45 @@
+.conversation-stream {
+  min-height: 530px;
+  border: solid 1px @primary-color;
+  border-radius: 15px;
+  margin: 0 15px;
+
+  .tablist {
+    margin: 0;
+  }
+  .ant-tabs > .ant-tabs-nav, .ant-tabs > div > .ant-tabs-nav {
+    margin: 0 !important;
+  }
+  .ant-tabs-tab-btn {
+    transition: all 0.1s;
+  }
+  .ant-tabs-nav-list {
+    width: 100%;
+    overflow: hidden;
+    .ant-tabs-tab {
+      flex: 1;
+      justify-content: center;
+      height: 50px;
+      margin: 0;
+      &:first-child {
+        border-top-left-radius: 12px;
+      }
+      &:nth-child(2) {
+        border-top-right-radius: 12px;
+      }
+    }
+    .ant-tabs-tab-active {
+      background-color: @primary-color;
+      color: #ffffff;
+      .ant-tabs-tab-btn {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: @mobile-query) {
+  .conversation-stream {
+    margin: 15px 0;
+  }
+}

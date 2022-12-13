@@ -1,0 +1,50 @@
+@import '../../../style/default.less';
+
+#subscriber {
+  min-height: 480px;
+  width: 100%;
+  object-fit: cover;
+  @media screen and (max-width: @mobile-small-query) {
+    min-height: 320px;
+    height: 320px;
+  }
+}
+
+#publisher {
+  min-height: 480px;
+  width: 100%;
+  @media screen and (max-width: @mobile-small-query) {
+    min-height: 230px;
+    height: 230px;
+  }
+}
+
+.video-container {
+  display: flex;
+  video {
+    width: 100%;
+  }
+}
+
+.conversation-users {
+  .users {
+    height: 435px;
+    overflow-y: scroll;
+    width: 100%;
+    .user {
+      margin: 15px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      .message-username {
+        font-weight: 1000;
+      }
+    }
+  }
+}
+
+.publishing {
+  font-size: 13px;
+  font-weight: 500;
+  color: @primary-color;
+}

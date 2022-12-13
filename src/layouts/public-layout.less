@@ -1,0 +1,52 @@
+@import '../../style/vars.less';
+.public-content {
+  min-height: 100vh;
+  background: @white-color;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.ant-card-head {
+  border: none;
+}
+.ant-btn-default {
+  border-color: @primary-color !important;
+  color: @primary-color !important;
+}
+.ant-card-body {
+  display: flex;
+  flex-wrap: wrap;
+  &::before {
+    display: block !important;
+  }
+  .ant-card-grid {
+    box-shadow: none;
+  }
+}
+
+.footer {
+  background: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  min-height: 72px;
+}
+
+@media (max-width: @desktop-query) {
+  .public-content {
+    padding: 50px 5px 5px;
+  }
+}
+
+.ant-space-wrap {
+  flex-wrap: wrap;
+  .ant-space-item {
+    margin-bottom: 10px;
+  }
+}
+
+.ant-card-actions {
+  background-color: @white-color !important;
+  border-top: none !important;
+}

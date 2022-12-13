@@ -1,0 +1,166 @@
+@import '../../style/vars.less';
+
+.register-page {
+  background-color: @background-container;
+  position: relative;
+  display: flex;
+  .form-register-container {
+    position: relative;
+    background: @white-color;
+    min-height: calc(100vh * 0.75);
+    width: 50%;
+
+    form.ant-form {
+      margin: 0;
+      position: relative;
+      padding: 20px 50px;
+      width: 100%;
+
+      .ant-form-item {
+        margin-bottom: 10px;
+
+        label {
+          color: #8c8c8c;
+        }
+
+        .ant-form-item-control {
+          .ant-form-item-control-input {
+            .ant-form-item-control-input-content {
+
+              .ant-input,
+              .ant-select-selector {
+                padding-right: 24px;
+                border-radius: unset;
+                border: unset;
+                border-bottom: 0.5px solid #d9d9d9;
+              }
+
+              .ant-input-password {
+                border-radius: unset;
+                border: unset;
+                border-bottom: 0.5px solid #d9d9d9;
+
+                .ant-input {
+                  border: unset;
+                }
+              }
+
+              .ant-picker {
+                width: 100%;
+                border-radius: unset;
+                border: unset;
+                border-bottom: 0.5px solid #d9d9d9;
+              }
+
+              .ant-upload {
+                span.file-name {
+                  width: 100%;
+                  display: block;
+                  padding: 10px;
+                  margin-top: 10px;
+                  border: #ccc dashed 0.5px;
+                }
+              }
+            }
+
+            .ant-form-item-children-icon {
+              color: @primary-color;
+            }
+          }
+        }
+      }
+
+      .row-button-auth {
+        margin-bottom: 30px;
+      }
+
+      .input-password {
+        label {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .ant-form-item-required {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    .logo {
+      display: none;
+
+      @media (max-width: 567px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      span {
+        vertical-align: text-bottom;
+        font-size: 16px;
+        text-transform: uppercase;
+        display: inline-block;
+        font-weight: 700;
+        color: @primary-color;
+      }
+    }
+
+    button.btn-submit {
+      width: 70%;
+      background-color: @primary-color;
+
+      &:hover {
+        background-color: @secondary-color;
+      }
+    }
+
+    p {
+      color: #000000;
+      text-align: center;
+      margin-top: 16px;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .form-register-placeholder {
+    background-image: url('/background-login.jpg');
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .register-page {
+
+    .form-register-container {
+      width: 100%;
+
+      form.ant-form {
+        padding: 20px;
+      }
+    }
+
+    button {
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .form-register-placeholder {
+      display: none;
+    }
+  }
+}
